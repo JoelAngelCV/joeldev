@@ -530,7 +530,7 @@ animation: fadeInFromTop .5s linear forwards, floating ease-in-out 5s infinite; 
 
 /* blog */
 
-.usuario-img{
+/* .usuario-img{
     height: 45px;
     width: 45px;
     border-radius: 50%;
@@ -543,7 +543,7 @@ animation: fadeInFromTop .5s linear forwards, floating ease-in-out 5s infinite; 
 
 .seguir{
     color: var(--colorSec);
-}
+} */
 
 /* contacto */
 
