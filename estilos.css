@@ -14,11 +14,6 @@
     margin: 0;
     padding: 0;
 }
-
-html, body {
-    width: 100%;
-    overflow-x: hidden; 
-}
   
 body {
     font-family: 'Lato', sans-serif;
@@ -106,11 +101,12 @@ min-height: 100vh; }
     background: linear-gradient(to left, #000000, #434343, #000505); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
     
-.principal h1 {
+.principal h3 {
     line-height: .9;
     font-weight: bold;
     display: inline-block;
     border: 15px solid var(--colorText);
+    border-radius: 3%;
     padding: 30px;
     font-size: 9rem;
     opacity: 0;
@@ -305,6 +301,33 @@ animation: fadeInFromTop .5s linear forwards, floating ease-in-out 5s infinite; 
     transform: rotate(-40deg); }
 
 /* end header */
+/* blog */
+.principal-blog {
+    color: var(--colorText);
+    background: var(--gradNueve);
+    position: relative;
+    border-radius: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    min-height: 11vh; }
+    @media (max-width: 767px) and (orientation: landscape) {
+        .principal {
+        min-height: 500px; } }
+    .principal-blog:before {
+        position: absolute;
+        display: block;
+        content: "";
+        opacity: 0.8;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #000000;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #000000, #434343, #001616);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #000000, #434343, #00090c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+/* fin blog  */
+
 
 /* inicio */
 
@@ -393,7 +416,7 @@ animation: fadeInFromTop .5s linear forwards, floating ease-in-out 5s infinite; 
     border-radius: 0;
     margin-bottom: 0;
     overflow: hidden;
-    min-height: 100vh; }
+    min-height: 56vh; }
     @media (max-width: 767px) and (orientation: landscape) {
         .principal-foto {
             min-height: 500px;
@@ -404,21 +427,23 @@ animation: fadeInFromTop .5s linear forwards, floating ease-in-out 5s infinite; 
         position: absolute;
         display: block;
         content: "";
-        opacity: 0.3;
+        opacity: 0.5;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-        background: url(img/enmiraflwrs12.jpg);
+        background: url(img/enmiraflwrs12.png);
         background-repeat: no-repeat;
         background-position: 50% 50%;
+        background-size: 68vh;
     } 
         
-    .principal-foto h1 {
+    .principal-foto h2 {
         line-height: .9;
         font-weight: bold;
         display: inline-block;
         border: 10px solid var(--colorText);
+        border-radius: 3%;
         padding: 30px;
         font-size: 4rem;
         opacity: 0;
@@ -434,10 +459,6 @@ animation: fadeInFromTop .5s linear forwards, floating ease-in-out 5s infinite; 
 
 .btn-cv:hover{
     background: var(--gradDos)
-}
-
-.barras-cont{
-    box-shadow: 5px 5px 15px -5px var(--colorPrin);
 }
 
 .skill-item {
@@ -530,20 +551,102 @@ animation: fadeInFromTop .5s linear forwards, floating ease-in-out 5s infinite; 
 
 /* blog */
 
-.usuario-img{
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
+.franja{
+    background-color: var(--colorPrin);
 }
 
-.post-img{
-    height: 330px;
-    width: 100%;
+.snip1527 {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.329);
+    border-radius: 3%;
+    color: var(--colorText);
+    max-width: 310px;
+    min-width: 250px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .snip1527 * {
+    
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+  
+  .snip1527:hover h3,
+  .snip1527:hover p {
+    text-decoration: underline;
 }
 
-.seguir{
-    color: var(--colorSec);
-}
+  .snip1527 img {
+    max-width: 100%;
+  }
+  
+  .snip1527 figcaption {
+    padding: 20px 20px 20px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+  }
+  
+  .snip1527 figcaption:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: -webkit-linear-gradient(to top, #0f0f0f, hsla(0, 3%, 16%, 0.829), hsla(0, 0%, 100%, 0));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, hsla(0, 0%, 4%, 0.836), hsla(180, 3%, 7%, 0.829), hsla(0, 0%, 57%, 0)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 1;
+    z-index: -1;
+  }
+
+  
+  .snip1527 h3 {
+    margin-bottom: 5px;
+  }
+  
+  .snip1527 p{
+    font-size: 0.9em;
+    line-height: 1.3em;
+    margin-bottom: 0px;
+  }
+  
+  .snip1527:hover img, .snip1527.hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .boton-host{
+    height: 50px;
+    width: 80%;
+    background-color: #7140FF;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 5px 5px 10px -5px #646464;
+    font-size: medium;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--colorText);
+    padding: 9px;
+    transition: all 0.3s;
+  }
+
+  .boton-host:hover{
+    transform: scale(1.1);
+  }
+
+  .img-host{
+    box-shadow: 5px 5px 10px -5px #9e9e9e;
+    transition: all 0.3s;
+  }
+
+  .img-host:hover{
+    transform: scale(1.1);
+  }
+
+/* Fin de blog */
+
 
 /* contacto */
 
@@ -570,35 +673,37 @@ animation: fadeInFromTop .5s linear forwards, floating ease-in-out 5s infinite; 
         z-index: 11;
     }
 
-    .principal h1 {
+    .nav-tit h3,h2{
+        font-size: medium;
+    }
+
+    .principal h3 {
         line-height: .9;
         border: 12px solid var(--colorText);
         padding: 25px;
         font-size: 6rem;
     }
 
-    .principal-foto h1{
-        border: 8px solid var(--colorText);
+    .principal-foto h2{
+        border: 6px solid var(--colorText);
         padding: 20px;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .principal-foto:before{
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-position: 50% 50%;
+        
+        transform: translateY(50px);
     }
 
     .nomos{
         display: none;
     }
 
-    .custom-poner{
-        height: 300px;
-    }
-    
+
+    .custom-poner h2{
+        font-size: 120%;
+    } 
+
     .presentacion{
         width: 80%;
     }
@@ -639,10 +744,19 @@ animation: fadeInFromTop .5s linear forwards, floating ease-in-out 5s infinite; 
         height: 58px;
     }
 
-    .post-img{
-        height: 180px;
-        width: 100%;
-        color: #00565a;
+    .franja h2{
+        font-size: 1.5rem;
+    }
+
+    .img-art{
+        width: 25%;
+    }
+
+    .snip1527{
+        max-width: 240px;
+        min-width: 180px;
     }
 
 }
+
+

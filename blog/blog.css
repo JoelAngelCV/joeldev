@@ -1,0 +1,33 @@
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 4rem;
+}
+.blog-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
+
+.hov-opa:hover li {
+  opacity: 0.5; 
+}
+
+.hov-opa:hover li:hover {
+  opacity: 1; 
+}
+
+article p{
+  font-size: 1.3em;
+  padding-bottom: 1.5vh;
+}
+
+article h3{
+  padding: 1vh 0;
+}
+
+@media screen and (max-width: 960px) {
+  article p{ font-size: 1em;
+  }
+}
